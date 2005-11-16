@@ -1,0 +1,89 @@
+==============
+URL dispatcher
+==============
+
+We're fanatics about good URLs. No ".php" or ".cgi", and certainly not any of
+that "0,2097,1-1-1928,00" nonsense. Django's URL dispatcher lets you design
+your URLs to be as pretty as the rest of your application.
+
+See `the Django overview`_ for a quick introduction to URL configurations; this
+document will continue from there.
+
+.. _`the Django overview`: http://www.djangoproject.com/documentation/overview/#design-your-urls
+
+The view prefix
+===============
+
+Here's the example from that overview::
+
+    from django.conf.urls.defaults import *
+
+    urlpatterns = patterns('',
+        (r'^/articles/(?P<year>\d{4})/$', 'myproject.news.views.articles.year_archive'),
+        (r'^/articles/(?P<year>\d{4})/(?P<month>\d{2})/$', 'myproject.news.views.articles.month_archive'),
+        (r'^/articles/(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d+)/$', 'myproject.news.views.articles.article_detail'),
+    )
+
+The first argument to ``patterns`` is an empty string in the above example, but
+that argument can be useful. The first argument is prepended to all the view
+functions in the urlpatterns list, so the above example could be written more
+concisely as::
+
+    urlpatterns = patterns('myproject.news.views.articles',
+        (r'^/articles/(?P<year>\d{4})/$', 'year_archive'),
+        (r'^/articles/(?P<year>\d{4})/(?P<month>\d{2})/$', 'month_archive'),
+        (r'^/articles/(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d+)/$', 'article_detail'),
+    )
+
+.. admonition:: Note
+
+    More precisely, the actual view function used is ``prefix + "." +
+    function_name``. The trailing "dot" does not need to be put in the prefix.
+
+Including other URLconfs
+========================
+
+You can also "include" other URLconf modules at any point along the path. This
+essentially "roots" a set of URLs below other ones.  This is most often used
+for a site's "base" URLconf; the ``ROOT_URLCONF`` setting points to a urlconf
+module that will be used for the entire site. Here's the URLconf for the
+`Django website`_ itself. It includes a number of other URLconfs::
+
+    from django.conf.urls.defaults import *
+
+    urlpatterns = patterns('',
+        (r'^weblog/',        include('django_website.apps.blog.urls.blog')),
+        (r'^documentation/', include('django_website.apps.docs.urls.docs')),
+        (r'^comments/',      include('django.contrib.comments.urls.comments')),
+        (r'^rss/',           include('django.conf.urls.rss')),
+    )
+
+Note that an included URLconf receives any captured parameters from parent
+URLconfs, so the following example is valid::
+
+    # In settings/urls/main.py
+    urlpatterns = patterns('',
+        (r'^(?P<username>\w+)/blog/', include('foo.urls.blog')),
+    )
+
+    # In foo/urls/blog.py
+    urlpatterns = patterns('foo.views'
+        (r'^$', 'blog.index'),
+        (r'^archive/$', 'blog.archive'),
+
+In the above example, the captured ``"username"`` variable is passed to the
+included URLconf, as expected.
+
+.. _`Django website`: http://www.djangoproject.com/
+
+Passing extra options to view functions
+=======================================
+
+There are two ways of passing arguments into your view functions: named captures
+from the regex (which you've already seen) and the optional third element
+in URLconf tuples. This third element can be a dictionary of extra keyword
+arguments that will be passed to the view function::
+
+    urlpatterns = patterns('myproject.news.views.articles',
+        (r'^/articles/(?P<year>\d{4})/$', 'year_archive', {key: value, key2: value2}),
+    )
