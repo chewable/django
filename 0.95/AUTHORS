@@ -1,0 +1,151 @@
+Django was originally created in late 2003 at World Online, the Web division
+of the Lawrence Journal-World newspaper in Lawrence, Kansas.
+
+
+The PRIMARY AUTHORS are (and/or have been):
+
+Adrian Holovaty <http://www.holovaty.com/>, who originally created Django with
+Simon and currently oversees things with Jacob.
+
+Simon Willison <http://simon.incutio.com/>, who originally created Django with
+Adrian during his year-long internship/placement at World Online and currently
+helps from the sidelines.
+
+Jacob Kaplan-Moss <http://www.jacobian.org/>, who joined the team shortly
+before Simon departed and currently oversees things with Adrian.
+
+Wilson Miner <http://www.wilsonminer.com/>, who designed Django's admin
+interface, pretty error pages, official Web site (djangoproject.com) and has
+made many other contributions. He makes us look good.
+
+Malcolm Tredinnick <http://www.pointy-stick.com/blog/>, who has made
+significant contributions to all levels of the framework, from its database
+layer to template system and documentation.
+
+Georg "Hugo" Bauer <http://hugo.muensterland.org/>, who added
+internationalization support, manages i18n contributions and has made a ton
+of excellent tweaks, feature additions and bug fixes.
+
+Luke Plant <http://lukeplant.me.uk/>, who has contributed many excellent
+improvements, including database-level improvements, the CSRF middleware and
+unit tests.
+
+Russell Keith-Magee <freakboy@iinet.net.au>, who has contributed many excellent
+improvements, including refactoring of the Django ORM code and unit tests.
+
+Robert Wittams <http://robert.wittams.com/>, who majorly refactored the Django
+admin application to allow for easier reuse and has made a ton of excellent
+tweaks, feature additions and bug fixes.
+
+
+And here is an inevitably incomplete list of MUCH-APPRECIATED CONTRIBUTORS --
+people who have submitted patches, reported bugs, added translations, helped
+answer newbie questions, and generally made Django that much better:
+
+    akaihola
+    Andreas
+    David Ascher <http://ascher.ca/>
+    Arthur <avandorp@gmail.com>
+    Jiri Barton
+    Ned Batchelder <http://www.nedbatchelder.com/>
+    Shannon -jj Behrens <http://jjinux.blogspot.com/>
+    James Bennett
+    Paul Bissex <http://e-scribe.com/>
+    Simon Blanchard
+    Andrew Brehaut <http://brehaut.net/blog>
+    andy@jadedplanet.net
+    Antonio Cavedoni <http://cavedoni.com/>
+    C8E
+    Chris Chamberlin <dja@cdc.msbx.net>
+    Amit Chakradeo <http://amit.chakradeo.net/>
+    ChaosKCW
+    Ian Clelland <clelland@gmail.com>
+    Matt Croydon <http://www.postneo.com/>
+    Jonathan Daugherty (cygnus) <http://www.cprogrammer.org/>
+    Jason Davies (Esaj) <http://www.jasondavies.com/>
+    Alex Dedul
+    deric@monowerks.com
+    dne@mayonnaise.net
+    Jeremy Dunck <http://dunck.us/>
+    Clint Ecker
+    gandalf@owca.info
+    Baishampayan Ghose
+    Espen Grindhaug <http://grindhaug.org/>
+    Brant Harris
+    hipertracker@gmail.com
+    Ian Holsman <http://feh.holsman.net/>
+    Kieran Holland <http://www.kieranholland.com>
+    Robert Rock Howard <http://djangomojo.com/>
+    Jason Huggins <http://www.jrandolph.com/blog/>
+    jcrasta@gmail.com
+    Michael Josephson <http://www.sdjournal.com/>
+    jpellerin@gmail.com
+    junzhang.jn@gmail.com
+    Garth Kidd <http://www.deadlybloodyserious.com/>
+    kilian <kilian.cavalotti@lip6.fr>
+    Sune Kirkeby <http://ibofobi.dk/>
+    Cameron Knight (ckknight)
+    Bruce Kroeze <http://coderseye.com/>
+    Joseph Kocherhans
+    konrad@gwu.edu
+    lakin.wecker@gmail.com
+    Stuart Langridge <http://www.kryogenix.org/>
+    Eugene Lazutkin <http://lazutkin.com/blog/>
+    Christopher Lenz <http://www.cmlenz.net/>
+    limodou
+    Martin Maney <http://www.chipy.org/Martin_Maney>
+    Manuzhai
+    Petar Marić
+    mark@junklight.com
+    mattycakes@gmail.com
+    Jason McBrayer <http://www.carcosa.net/jason/>
+    michael.mcewan@gmail.com
+    mir@noris.de
+    mmarshall
+    Eric Moritz <http://eric.themoritzfamily.com/>
+    Robin Munn <http://www.geekforgod.com/>
+    Nebojša Dorđević
+    Sam Newman <http://www.magpiebrain.com/>
+    Neal Norwitz <nnorwitz@google.com>
+    oggie rob <oz.robharvey@gmail.com>
+    Jay Parlar <parlar@gmail.com>
+    pgross@thoughtworks.com
+    phaedo <http://phaedo.cx/>
+    phil@produxion.net
+    Gustavo Picon
+    Luke Plant <http://lukeplant.me.uk/>
+    plisk
+    Daniel Poelzleithner <http://poelzi.org/>
+    J. Rademaker
+    Brian Ray <http://brianray.chipy.org/>
+    rhettg@gmail.com
+    Oliver Rutherfurd <http://rutherfurd.net/>
+    Ivan Sagalaev (Maniac) <http://www.softwaremaniacs.org/>
+    David Schein
+    sopel
+    Radek Švarz <http://www.svarz.cz/translate/>
+    Swaroop C H <http://www.swaroopch.info>
+    Aaron Swartz <http://www.aaronsw.com/>
+    Tom Tobin
+    Tom Insam
+    Joe Topjian <http://joe.terrarum.net/geek/code/python/django/>
+    Amit Upadhyay
+    Geert Vanderkelen
+    Milton Waddams
+    Rachel Willmer <http://www.willmer.com/kb/>
+    wojtek
+    ye7cakf02@sneakemail.com
+    Cheng Zhang
+
+A big THANK YOU goes to:
+
+    Rob Curley and Ralph Gage for letting us open-source Django.
+
+    Frank Wiles for making excellent arguments for open-sourcing, and for
+    his sage sysadmin advice.
+
+    Ian Bicking for convincing Adrian to ditch code generation.
+
+    Mark Pilgrim for diveintopython.org.
+
+    Guido van Rossum for creating Python.
