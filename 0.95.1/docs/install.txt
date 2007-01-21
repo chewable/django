@@ -1,0 +1,112 @@
+=====================
+How to install Django
+=====================
+
+This document will get you up and running with Django.
+
+Install Python
+==============
+
+Being a Python Web framework, Django requires Python.
+
+It works with any Python version 2.3 and higher.
+
+Get Python at www.python.org. If you're running Linux or Mac OS X, you probably
+already have it installed.
+
+Install Apache and mod_python
+=============================
+
+If you just want to experiment with Django, skip this step. Django comes with
+its own Web server for development purposes.
+
+If you want to use Django on a production site, use Apache with `mod_python`_.
+mod_python is similar to mod_perl -- it embeds Python within Apache and loads
+Python code into memory when the server starts. Code stays in memory throughout
+the life of an Apache process, which leads to significant performance gains
+over other server arrangements. Make sure you have Apache installed, with the
+mod_python module activated. Django requires Apache 2.x and mod_python 3.x.
+
+See `How to use Django with mod_python`_ for information on how to configure
+mod_python once you have it installed.
+
+If you can't use mod_python for some reason, fear not: Django follows the WSGI_
+spec, which allows it to run on a variety of server platforms. See the
+`server-arrangements wiki page`_ for specific installation instructions for
+each platform.
+
+.. _Apache: http://httpd.apache.org/
+.. _mod_python: http://www.modpython.org/
+.. _WSGI: http://www.python.org/peps/pep-0333.html
+.. _How to use Django with mod_python: http://www.djangoproject.com/documentation/modpython/
+.. _server-arrangements wiki page: http://code.djangoproject.com/wiki/ServerArrangements
+
+Get your database running
+=========================
+
+If you plan to use Django's database API functionality, you'll need to
+make sure a database server is running. Django works with PostgreSQL_
+(recommended), MySQL_ and SQLite_.
+
+Additionally, you'll need to make sure your Python database bindings are
+installed.
+
+* If you're using PostgreSQL, you'll need the psycopg_ package (version 1.1 --
+  not version 1.0 or version 2, which is still in beta). If you're on Windows,
+  check out the unofficial `compiled Windows version`_.
+* If you're using MySQL, you'll need MySQLdb_.
+* If you're using SQLite, you'll need pysqlite_. Use version 2.0.3 or higher.
+
+.. _PostgreSQL: http://www.postgresql.org/
+.. _MySQL: http://www.mysql.com/
+.. _Django's ticket system: http://code.djangoproject.com/report/1
+.. _psycopg: http://initd.org/projects/psycopg1
+.. _compiled Windows version: http://stickpeople.com/projects/python/win-psycopg/
+.. _MySQLdb: http://sourceforge.net/projects/mysql-python
+.. _SQLite: http://www.sqlite.org/
+.. _pysqlite: http://initd.org/tracker/pysqlite
+
+Install the Django code
+=======================
+
+Installation instructions are slightly different depending on whether you're
+using the latest official version or the latest development version.
+
+It's easy either way.
+
+Installing the official version
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Download Django-0.95.tar.gz from our `download page`_.
+2. ``tar xzvf Django-0.95.tar.gz``
+3. ``cd Django-0.95``
+4. ``sudo python setup.py install``
+
+Note that the last command will automatically download and install setuptools_
+if you don't already have it installed. This requires a working Internet
+connection.
+
+This will install Django in your Python installation's ``site-packages``
+directory.
+
+.. _setuptools: http://peak.telecommunity.com/DevCenter/setuptools
+
+Installing the development version
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Make sure you have Subversion_ installed.
+2. ``svn co http://code.djangoproject.com/svn/django/trunk/ django_src``
+3. Symlink ``django_src/django`` so that ``django`` is within your Python
+   ``site-packages`` directory:
+
+   ``ln -s `pwd`/django_src/django /usr/lib/python2.3/site-packages/django``
+
+   (In the above line, change ``python2.3`` to match your current Python version.)
+
+You don't have to run ``python setup.py install``.
+
+When you want to update your code, just run the command ``svn update`` from
+within the ``django_src`` directory.
+
+.. _`download page`: http://www.djangoproject.com/download/
+.. _Subversion: http://subversion.tigris.org/
