@@ -1,0 +1,49 @@
+Django is a high-level Python Web framework that encourages rapid
+development and clean, pragmatic design.
+
+
+About this version
+==================
+
+This is the Django 0.91 "bugfixes" branch, which is intended to
+provide bugfix and patch support for users of Django 0.91 who have not
+been able to migrate to a more recent version. No new features will be
+added in this branch, and it is maintained solely as a means of
+providing support to legacy Django installations.
+
+If you're completely new to Django we highly recommend that you use
+either the latest stable release or a Subversion checkout from
+Django's trunk; Django is always evolving, and the latest and greatest
+features are only available to users of newer versions of the
+framework.
+
+
+More information
+================
+
+The complete history of bugs fixed in this branch can be viewed online
+at http://code.djangoproject.com/log/django/branches/0.91-bugfixes.
+
+We also recommend that users of this branch subscribe to the
+"django-announce" mailing list, a low-traffic, announcements-only list
+which will send messages whenever an important (i.e.,
+security-related) bug is fixed. You can subscribe to the list via
+Google Groups at http://groups.google.com/group/django-announce.
+
+The documentation for this version of Django has been frozen, and is
+available online at http://www.djangoproject.com/documentation/0_91/.
+
+
+Submitting bugs
+===============
+
+If you run into a bug in Django 0.91, please search the Django ticket
+database to see if the issue has already been reported; if not, please
+head over to http://code.djangoproject.com/newticket and file a new
+ticket with as much information about the bug as you can provide.
+
+If you're running into a bug which has been reported but not fixed,
+feel free to update the ticket with any additional information you
+have, and to assign it to 'ubernostrum' (AKA James Bennett, the
+maintainer of this branch).
+
